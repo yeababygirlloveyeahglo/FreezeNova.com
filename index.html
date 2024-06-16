@@ -37,10 +37,19 @@
                 // Google Analytics ID for freezenova.com
                 scriptSrc = 'https://www.googletagmanager.com/gtag/js?id=G-XQ52CX5N2K';
                 configId = 'G-XQ52CX5N2K';
-            } else {
-                // Google Analytics ID for other domains
-                scriptSrc = 'https://www.googletagmanager.com/gtag/js?id=G-Z1FT2YYNFS';
-                configId = 'G-Z1FT2YYNFS';
+            }
+    		else {
+    			if (window.location.hostname === 'freezenova.github.io') {
+                    // Google Analytics ID for freezenova.github.io
+                    scriptSrc = 'https://www.googletagmanager.com/gtag/js?id=G-YXFREC5MSS';
+                    configId = 'G-YXFREC5MSS';
+                }
+    			else
+    			{
+    				// Google Analytics ID for other domains
+                	scriptSrc = 'https://www.googletagmanager.com/gtag/js?id=G-Z1FT2YYNFS';
+                	configId = 'G-Z1FT2YYNFS';
+				}
             }
 
             // Create the script element for Google Analytics
