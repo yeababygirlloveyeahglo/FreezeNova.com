@@ -69,13 +69,23 @@
         })();
 </script>
 
- <script>
-      if (window.location.href === "https://freezenova.github.io/") {
-        window.location.replace("https://freezenova.github.io/index.html");
-      }
+<script>
+    function redirectToIndex() {
+        var currentUrl = window.location.href;
+        var path = window.location.pathname;
+        var hostname = window.location.hostname;
+        
+        if (hostname === 'freezenova.github.io') {
+            if (path.endsWith('/') && !path.endsWith('/index.html')) {
+                window.location.replace(currentUrl + 'index.html');
+            }
+        }
+    }
+
+    redirectToIndex();
 </script>
-    
-    
+
+
 <script>
         (function() {
             if (window.location.hostname === 'freezenova.com' || window.location.hostname === 'freezenova.github.io') {
