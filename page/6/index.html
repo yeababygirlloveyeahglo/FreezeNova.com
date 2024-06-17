@@ -47,9 +47,17 @@
                 }
     			else
     			{
-    				// Google Analytics ID for other domains
-                	scriptSrc = 'https://www.googletagmanager.com/gtag/js?id=G-Z1FT2YYNFS';
-                	configId = 'G-Z1FT2YYNFS';
+    				if (window.location.hostname === 'd9k5uuutyxogn.cloudfront.net') {
+                        // Google Analytics ID for d9k5uuutyxogn.cloudfront.net
+                        scriptSrc = 'https://www.googletagmanager.com/gtag/js?id=G-KLY0GTQKFT';
+                        configId = 'G-KLY0GTQKFT';
+                    }
+                    else
+                    {
+                        // Google Analytics ID for other domains
+                        scriptSrc = 'https://www.googletagmanager.com/gtag/js?id=G-Z1FT2YYNFS';
+                        configId = 'G-Z1FT2YYNFS';
+                    }
 				}
             }
 
@@ -88,14 +96,14 @@
 
 <script>
         (function() {
-            if (window.location.hostname === 'freezenova.com' || window.location.hostname === 'freezenova.github.io') {
+            if (window.location.hostname !== 'd9k5uuutyxogn.cloudfront.net') {
                 var canonicalLink = document.createElement('link');
                 canonicalLink.rel = 'canonical';
                 
                 if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-                    canonicalLink.href = 'https://unblocked-games.s3.amazonaws.com/index.html';
+                    canonicalLink.href = 'https://d9k5uuutyxogn.cloudfront.net/index.html';
                 } else {
-                    canonicalLink.href = 'https://unblocked-games.s3.amazonaws.com' + window.location.pathname;
+                    canonicalLink.href = 'https://d9k5uuutyxogn.cloudfront.net' + window.location.pathname;
                 }
                 
                 document.head.appendChild(canonicalLink);
@@ -174,10 +182,10 @@
             </li>
                   <li>
                   <a
-                     href="https://freezenova.github.io/index.html"
+                     href="https://d9k5uuutyxogn.cloudfront.net/index.html"
                         target="_self"
          >
-                     FreezeNova.github.io
+                     FreezeNova.cloud
                   </a>
          
             </li>
