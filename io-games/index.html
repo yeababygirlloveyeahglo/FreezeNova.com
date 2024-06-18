@@ -112,16 +112,16 @@
 
 
 <script>
-  // Function to add meta tags
+  // List of allowed domains
+  var allowedDomains = [
+    'unblocked-games.s3.amazonaws.com',
+    'unblocked-games.s3-accelerate.amazonaws.com'
+  ];
+
+  // Function to add meta tags for specific domains and paths
   function addMetaTags() {
     var hostname = window.location.hostname;
     var pathname = window.location.pathname;
-
-    // List of allowed domains
-    var allowedDomains = [
-      'unblocked-games.s3.amazonaws.com',
-      'unblocked-games.s3-accelerate.amazonaws.com'
-    ];
 
     // Check if the current hostname is not in the allowed list
     // and the pathname is not exactly the root or root index.html
@@ -142,7 +142,19 @@
     }
   }
 
-  // Call the function to add meta tags
+  // Function to update the page title to include the domain name
+  function updatePageTitle() {
+    var hostname = window.location.hostname;
+
+    // Check if the current hostname is not in the allowed list
+    if (!allowedDomains.includes(hostname)) {
+      var currentTitle = document.title;
+      document.title = `${currentTitle} - ${hostname}`;
+    }
+  }
+
+  // Call the functions
+  updatePageTitle();
   addMetaTags();
 </script>
     </head>
