@@ -128,18 +128,12 @@
     // and the pathname is not exactly the root or root index.html
     if (!allowedDomains.includes(hostname) && !(pathname === '/' || pathname === '/index.html')) {
       // Create meta tag for noindex
-      var metaNoIndex = document.createElement('meta');
-      metaNoIndex.setAttribute('name', 'robots');
-      metaNoIndex.setAttribute('content', 'noindex');
+      var metaNoIndexNoFollow = document.createElement('meta');
+      metaNoIndexNoFollow.setAttribute('name', 'robots');
+      metaNoIndexNoFollow.setAttribute('content', 'noindex, nofollow');
 
-      // Create meta tag for nofollow
-      var metaNoFollow = document.createElement('meta');
-      metaNoFollow.setAttribute('name', 'robots');
-      metaNoFollow.setAttribute('content', 'nofollow');
-
-      // Append meta tags to the head
-      document.head.appendChild(metaNoIndex);
-      document.head.appendChild(metaNoFollow);
+      // Append the meta tag to the head
+      document.head.appendChild(metaNoIndexNoFollow);
     }
   }
 
@@ -2922,7 +2916,7 @@
 			
 <nav class="filter tag_list">
 
-<img class="center-image" src="/games/media/main/Unblocked-Games-Banner.webp" alt="Unblocked Games Banner" "style= width:1200px; max-width: 100%; height: auto; align=center;">
+<img class="center-image" src="/media/files/main/Unblocked-Games-Banner.webp" alt="Unblocked Games Banner" "style= width:1200px; max-width: 100%; height: auto; align=center;">
 <h2>Unblocked Games at School</h2>
 <p>Looking for some fun and cool games to play during long school hours or meetings? Unblocked Games FreezeNova is a website for free online games accessible on protected networks.</p>
 <p>We design our games for players of all ages and skill levels. Whether you&apos;re an avid gamer or casually hanging out, we have great titles with a wide range of tags. These tags include 2 Player, Action, Adventure, Drift, Driving, io Games, Minecraft, Mobile, Multiplayer, Shooting, Strategy and many more.</p>

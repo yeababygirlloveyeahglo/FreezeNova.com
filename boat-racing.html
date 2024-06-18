@@ -86,18 +86,12 @@
     // and the pathname is not exactly the root or root index.html
     if (!allowedDomains.includes(hostname) && !(pathname === '/' || pathname === '/index.html')) {
       // Create meta tag for noindex
-      var metaNoIndex = document.createElement('meta');
-      metaNoIndex.setAttribute('name', 'robots');
-      metaNoIndex.setAttribute('content', 'noindex');
+      var metaNoIndexNoFollow = document.createElement('meta');
+      metaNoIndexNoFollow.setAttribute('name', 'robots');
+      metaNoIndexNoFollow.setAttribute('content', 'noindex, nofollow');
 
-      // Create meta tag for nofollow
-      var metaNoFollow = document.createElement('meta');
-      metaNoFollow.setAttribute('name', 'robots');
-      metaNoFollow.setAttribute('content', 'nofollow');
-
-      // Append meta tags to the head
-      document.head.appendChild(metaNoIndex);
-      document.head.appendChild(metaNoFollow);
+      // Append the meta tag to the head
+      document.head.appendChild(metaNoIndexNoFollow);
     }
   }
 
