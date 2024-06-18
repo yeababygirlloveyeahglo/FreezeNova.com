@@ -117,6 +117,7 @@
   // Function to add meta tags
   function addMetaTags() {
     var hostname = window.location.hostname;
+    var pathname = window.location.pathname;
 
     // List of allowed domains
     var allowedDomains = [
@@ -125,7 +126,8 @@
     ];
 
     // Check if the current hostname is not in the allowed list
-    if (!allowedDomains.includes(hostname)) {
+    // and the pathname is not exactly the root or root index.html
+    if (!allowedDomains.includes(hostname) && !(pathname === '/' || pathname === '/index.html')) {
       // Create meta tag for noindex
       var metaNoIndex = document.createElement('meta');
       metaNoIndex.setAttribute('name', 'robots');
