@@ -101,14 +101,52 @@
 
     // Check if the current hostname is not in the allowed list
     if (!allowedDomains.includes(hostname)) {
-      var currentTitle = document.title;
-      document.title = `${currentTitle} - ${hostname}`;
+    	if (hostname == 'd9k5uuutyxogn.cloudfront.net')
+        {
+			var currentTitle = document.title;
+      		document.title = `${currentTitle} - Cloud`;
+        }
+    	else
+    	{
+    		var currentTitle = document.title;
+      		document.title = `${currentTitle} - ${hostname}`;
+    	}
     }
+    else if (hostname == 'unblocked-games.s3-accelerate.amazonaws.com')
+    {
+    	var currentTitle = document.title;
+      	document.title = `${currentTitle} Accelerate`;
+	}
+    
   }
+    
+    function updatePageH1() {
+		document.addEventListener('DOMContentLoaded', (event) => {
+			const firstHeading = document.querySelector('h1');
+            if (firstHeading) {
+				var hostname = window.location.hostname;
+				if (!allowedDomains.includes(hostname)) {
+    				if (hostname == 'd9k5uuutyxogn.cloudfront.net')
+    				{
+    					firstHeading.innerHTML += ' <sup>Cloud</sup>';
+    				}
+    				else
+    				{
+    					firstHeading.innerHTML += ` <sup>${hostname}</sup>`;
+    				}
+				}
+				else if (hostname == 'unblocked-games.s3-accelerate.amazonaws.com')
+				{
+					firstHeading.innerHTML += ' <sup>Accelerate</sup>';
+				}
+            }
+        });
+  	}
 
   // Call the functions
   updatePageTitle();
-  addMetaTags();</script></head><body><header class="header" id="js-header"><a href="./index.html" class="logo"><img src="./media/website/freezenovagames300.png" alt="Unblocked Games FreezeNova" width="300" height="57"></a><nav class="navbar js-navbar"><button class="navbar__toggle js-toggle" aria-label="Menu"><span class="navbar__toggle-box"><span class="navbar__toggle-inner">Menu</span></span></button><ul class="navbar__menu"><li><a href="./index.html" target="_self">Home</a></li><li><a href="./recently-played-games.html" target="_self">Recent</a></li><li><a href="./new-games.html" target="_self">New</a></li><li><a href="./car/index.html" target="_self">Car</a></li><li><a href="./io-games/index.html" target="_self">io Games</a></li><li><a href="https://freezenova.wordpress.com/" target="_blank" rel="nofollow">Subscribe</a></li><li><a href="https://unblocked-games.s3-accelerate.amazonaws.com/index.html" target="_self">FreezeNova.Cloud</a></li></ul></nav><div class="search"><div class="search__overlay js-search-overlay"><form action="#search" class="search__form"><input class="search__input" type="search" placeholder="Search" aria-label="Search"> <button type="submit" class="search__button"><span>Search</span></button></form></div><button class="search__btn js-search-btn" aria-label="Search"><svg role="presentation" focusable="false" height="18" width="18"><use xlink:href="./assets/svg/svg-map.svg#search"/></svg></button></div></header><main class="main main--post"><article class="post"><header class="hero post__header"><div class="wrapper wrapper--narrow"><ol class="breadcrumb"><li><a href="./index.html"><span>Home</span></a></li><li><span>&rsaquo;</span> <a href="./2d/index.html" title="2D"><span>2D</span></a></li></ol><h1 class="post__title">Car Wash</h1><div class="post__meta"><div class="post__author">By <a href="./index.html" class="invert" title="Unblocked Games FreezeNova">Unblocked Games FreezeNova</a></div><a href="./car-wash.html#comments" aria-label="Comments" rel="nofollow" class="post__comments invert"><svg><use xlink:href="./assets/svg/svg-map.svg#comments"/></svg></a></div></div></header><div class="wrapper main__content post__inner"><div class="post__entry"><div class="post__iframe"><iframe loading="lazy" width="1060" height="650" src="https://unblocked-games.s3.amazonaws.com/games/2023/unity2/car-wash/index.html" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="true" allowfullscreen="allowfullscreen"></iframe></div><p><strong>Car Wash</strong> is an engaging game where you must manage and attend to a stream of vehicles needing a thorough cleaning.With an amazing car wash environment, various car models will eliminate their dirt and grime. Special tools can remove leaves and branches that stick to the car. Then the next step is to wash the car with brushes, sponges and water hoses. Get ready to cleanse the colored spots and of course, the last step is to polish the car to look like a new one.<br><br>Now the car is prepared to go to the gas station. Here you must be sure that the wheels are inflated well. After that, take the time to refuel and you are able to explore the surroundings with the newly washed car. Do every step and win 30 stars to unlock new vehicles. <br><br>Pay attention to the details and spend your resources wisely. Ensure an adequate supply of water, soap, take care of the wheels and refuel the necessary amount of fuel to the car. Don't worry about the time; the drivers will wait to see when their car is cleaned. Whether you have normal cars, police cars, trucks, luxury cars,tanks, school buses, limousines or even a UFO vehicle, you will always have fun and experience a car wash simulation. <br>This game is made special for car lovers and those wanting to test their car-washing skills.</p><figure class="post__featured-image"><img src="./media/posts/358/512-2.jpg" srcset="./media/posts/358/responsive/512-2-xs.jpg 384w, ./media/posts/358/responsive/512-2-sm.jpg 600w, ./media/posts/358/responsive/512-2-md.jpg 768w, ./media/posts/358/responsive/512-2-lg.jpg 1200w" sizes="(max-width: 2560px) 100vw, 2560px" loading="lazy" height="512" width="512" alt="Car Wash Unblocked"></figure></div><footer><div class="post__tags-share"><ul class="post__tag"><li><a href="./2d/index.html">2D</a></li><li><a href="./car/index.html">Car</a></li><li><a href="./kids/index.html">Kids</a></li><li><a href="./unity/index.html">Unity</a></li></ul></div></footer></div></article><div class="comments-area wrapper post__inner" id="comments"></div><div class="banner banner--after-post"><script>function tryVideo()
+  addMetaTags();
+  updatePageH1();</script></head><body><header class="header" id="js-header"><a href="./index.html" class="logo"><img src="./media/website/freezenovagames300.png" alt="Unblocked Games FreezeNova" width="300" height="57"></a><nav class="navbar js-navbar"><button class="navbar__toggle js-toggle" aria-label="Menu"><span class="navbar__toggle-box"><span class="navbar__toggle-inner">Menu</span></span></button><ul class="navbar__menu"><li><a href="./index.html" target="_self">Home</a></li><li><a href="./recently-played-games.html" target="_self">Recent</a></li><li><a href="./new-games.html" target="_self">New</a></li><li><a href="./car/index.html" target="_self">Car</a></li><li><a href="./io-games/index.html" target="_self">io Games</a></li><li><a href="https://freezenova.wordpress.com/" target="_blank" rel="nofollow">Subscribe</a></li><li><a href="https://unblocked-games.s3-accelerate.amazonaws.com/index.html" target="_self">FreezeNova Accelerate</a></li></ul></nav><div class="search"><div class="search__overlay js-search-overlay"><form action="#search" class="search__form"><input class="search__input" type="search" placeholder="Search" aria-label="Search"> <button type="submit" class="search__button"><span>Search</span></button></form></div><button class="search__btn js-search-btn" aria-label="Search"><svg role="presentation" focusable="false" height="18" width="18"><use xlink:href="./assets/svg/svg-map.svg#search"/></svg></button></div></header><main class="main main--post"><article class="post"><header class="hero post__header"><div class="wrapper wrapper--narrow"><ol class="breadcrumb"><li><a href="./index.html"><span>Home</span></a></li><li><span>&rsaquo;</span> <a href="./2d/index.html" title="2D"><span>2D</span></a></li></ol><h1 class="post__title">Car Wash</h1><div class="post__meta"><div class="post__author">By <a href="./index.html" class="invert" title="Unblocked Games FreezeNova">Unblocked Games FreezeNova</a></div><a href="./car-wash.html#comments" aria-label="Comments" rel="nofollow" class="post__comments invert"><svg><use xlink:href="./assets/svg/svg-map.svg#comments"/></svg></a></div></div></header><div class="wrapper main__content post__inner"><div class="post__entry"><div class="post__iframe"><iframe loading="lazy" width="1060" height="650" src="https://unblocked-games.s3.amazonaws.com/games/2023/unity2/car-wash/index.html" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="true" allowfullscreen="allowfullscreen"></iframe></div><p><strong>Car Wash</strong> is an engaging game where you must manage and attend to a stream of vehicles needing a thorough cleaning.With an amazing car wash environment, various car models will eliminate their dirt and grime. Special tools can remove leaves and branches that stick to the car. Then the next step is to wash the car with brushes, sponges and water hoses. Get ready to cleanse the colored spots and of course, the last step is to polish the car to look like a new one.<br><br>Now the car is prepared to go to the gas station. Here you must be sure that the wheels are inflated well. After that, take the time to refuel and you are able to explore the surroundings with the newly washed car. Do every step and win 30 stars to unlock new vehicles. <br><br>Pay attention to the details and spend your resources wisely. Ensure an adequate supply of water, soap, take care of the wheels and refuel the necessary amount of fuel to the car. Don't worry about the time; the drivers will wait to see when their car is cleaned. Whether you have normal cars, police cars, trucks, luxury cars,tanks, school buses, limousines or even a UFO vehicle, you will always have fun and experience a car wash simulation. <br>This game is made special for car lovers and those wanting to test their car-washing skills.</p><figure class="post__featured-image"><img src="./media/posts/358/512-2.jpg" srcset="./media/posts/358/responsive/512-2-xs.jpg 384w, ./media/posts/358/responsive/512-2-sm.jpg 600w, ./media/posts/358/responsive/512-2-md.jpg 768w, ./media/posts/358/responsive/512-2-lg.jpg 1200w" sizes="(max-width: 2560px) 100vw, 2560px" loading="lazy" height="512" width="512" alt="Car Wash Unblocked"></figure></div><footer><div class="post__tags-share"><ul class="post__tag"><li><a href="./2d/index.html">2D</a></li><li><a href="./car/index.html">Car</a></li><li><a href="./kids/index.html">Kids</a></li><li><a href="./unity/index.html">Unity</a></li></ul></div></footer></div></article><div class="comments-area wrapper post__inner" id="comments"></div><div class="banner banner--after-post"><script>function tryVideo()
     {
     	if (typeof unblockedOnLoadVideo !== "undefined") { 
             unblockedOnLoadVideo(document, window.location.pathname);
