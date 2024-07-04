@@ -103,12 +103,12 @@
     				if (window.location.hostname !== 'freezenova.github.io')
     				{
     					canonicalLink.href = 'https://unblocked-games.s3.amazonaws.com/index.html';
+    					document.head.appendChild(canonicalLink);
     				}
                 } else {
                     canonicalLink.href = 'https://unblocked-games.s3.amazonaws.com' + window.location.pathname;
+    				document.head.appendChild(canonicalLink);
                 }
-                
-                document.head.appendChild(canonicalLink);
             }
         })();
 </script>
