@@ -64,7 +64,10 @@
                 canonicalLink.rel = 'canonical';
                 
                 if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-                    canonicalLink.href = 'https://unblocked-games.s3.amazonaws.com/index.html';
+    				if (window.location.hostname !== 'freezenova.github.io')
+    				{
+    					canonicalLink.href = 'https://unblocked-games.s3.amazonaws.com/index.html';
+    				}
                 } else {
                     canonicalLink.href = 'https://unblocked-games.s3.amazonaws.com' + window.location.pathname;
                 }
@@ -74,7 +77,8 @@
         })();</script><script>// List of allowed domains
   var allowedDomains = [
     'unblocked-games.s3.amazonaws.com',
-    'unblocked-games.s3-accelerate.amazonaws.com'
+    'unblocked-games.s3-accelerate.amazonaws.com',
+    'freezenova.github.io'
   ];
 
   // Function to add meta tags for specific domains and paths

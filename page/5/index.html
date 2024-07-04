@@ -103,7 +103,10 @@
                 canonicalLink.rel = 'canonical';
                 
                 if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-                    canonicalLink.href = 'https://unblocked-games.s3.amazonaws.com/index.html';
+    				if (window.location.hostname !== 'freezenova.github.io')
+    				{
+    					canonicalLink.href = 'https://unblocked-games.s3.amazonaws.com/index.html';
+    				}
                 } else {
                     canonicalLink.href = 'https://unblocked-games.s3.amazonaws.com' + window.location.pathname;
                 }
@@ -118,7 +121,8 @@
   // List of allowed domains
   var allowedDomains = [
     'unblocked-games.s3.amazonaws.com',
-    'unblocked-games.s3-accelerate.amazonaws.com'
+    'unblocked-games.s3-accelerate.amazonaws.com',
+    'freezenova.github.io'
   ];
 
   // Function to add meta tags for specific domains and paths
@@ -343,6 +347,62 @@
                <div class="section recently">
                   <div class="l-isotope js-infinitescroll">
                    <div class="grid-sizer"></div>
+                        <article
+                           class="c-card 
+                               3d  arcade  puzzle 
+                           ">
+                           <div class="c-card__wrapper">
+                                       <figure class="c-card__image ">
+                                          <img
+                                             src="./../../media/posts/93/loverescue512.jpg"
+                                                srcset="./../../media/posts/93/responsive/loverescue512-xs.jpg 384w ,./../../media/posts/93/responsive/loverescue512-sm.jpg 600w" sizes="(min-width: 600px) 14.285vw, 100vw"
+                                              loading="lazy"
+                                             height="512"
+                                             width="512"
+                                             alt="Love Pins Unblocked Game">
+                                       </figure>
+                              <div class="c-card__content">
+                                 <header>
+                                    <div class="c-card__title">
+                                       <a href="./../../love-pins.html">
+                                          Love Pins
+                                       </a>
+                                    </div>
+                                 </header>
+                                    <footer class="c-card__meta">
+                                             <a href="./../../arcade/index.html" class="c-card__tag">Arcade</a>
+                                    </footer>
+                              </div>
+                           </div>
+                        </article>
+                        <article
+                           class="c-card 
+                               2d  arcade  escape  mobile 
+                           ">
+                           <div class="c-card__wrapper">
+                                       <figure class="c-card__image ">
+                                          <img
+                                             src="./../../media/posts/294/512-2.jpg"
+                                                srcset="./../../media/posts/294/responsive/512-2-xs.jpg 384w ,./../../media/posts/294/responsive/512-2-sm.jpg 600w" sizes="(min-width: 600px) 14.285vw, 100vw"
+                                              loading="lazy"
+                                             height="512"
+                                             width="512"
+                                             alt="Heist Escape Unblocked Game">
+                                       </figure>
+                              <div class="c-card__content">
+                                 <header>
+                                    <div class="c-card__title">
+                                       <a href="./../../heist-escape.html">
+                                          Heist Escape
+                                       </a>
+                                    </div>
+                                 </header>
+                                    <footer class="c-card__meta">
+                                             <a href="./../../2d/index.html" class="c-card__tag">2D</a>
+                                    </footer>
+                              </div>
+                           </div>
+                        </article>
                         <article
                            class="c-card 
                                2d  girl  html5  kids  mobile 
@@ -2803,62 +2863,6 @@
                                  </header>
                                     <footer class="c-card__meta">
                                              <a href="./../../strategy/index.html" class="c-card__tag">Strategy</a>
-                                    </footer>
-                              </div>
-                           </div>
-                        </article>
-                        <article
-                           class="c-card 
-                               3d  adventure  scary 
-                           ">
-                           <div class="c-card__wrapper">
-                                       <figure class="c-card__image ">
-                                          <img
-                                             src="./../../media/posts/185/512.jpg"
-                                                srcset="./../../media/posts/185/responsive/512-xs.jpg 384w ,./../../media/posts/185/responsive/512-sm.jpg 600w" sizes="(min-width: 600px) 14.285vw, 100vw"
-                                              loading="lazy"
-                                             height="512"
-                                             width="512"
-                                             alt="Jacks Village Unblocked">
-                                       </figure>
-                              <div class="c-card__content">
-                                 <header>
-                                    <div class="c-card__title">
-                                       <a href="./../../jacks-village.html">
-                                          Jacks Village
-                                       </a>
-                                    </div>
-                                 </header>
-                                    <footer class="c-card__meta">
-                                             <a href="./../../adventure/index.html" class="c-card__tag">Adventure</a>
-                                    </footer>
-                              </div>
-                           </div>
-                        </article>
-                        <article
-                           class="c-card 
-                               3d  driving  simulator  unity 
-                           ">
-                           <div class="c-card__wrapper">
-                                       <figure class="c-card__image ">
-                                          <img
-                                             src="./../../media/posts/99/uphillbussim512.jpg"
-                                                srcset="./../../media/posts/99/responsive/uphillbussim512-xs.jpg 384w ,./../../media/posts/99/responsive/uphillbussim512-sm.jpg 600w" sizes="(min-width: 600px) 14.285vw, 100vw"
-                                              loading="lazy"
-                                             height="512"
-                                             width="512"
-                                             alt="Uphill Bus Simulator Unblocked">
-                                       </figure>
-                              <div class="c-card__content">
-                                 <header>
-                                    <div class="c-card__title">
-                                       <a href="./../../uphill-bus-simulator.html">
-                                          Uphill Bus Simulator
-                                       </a>
-                                    </div>
-                                 </header>
-                                    <footer class="c-card__meta">
-                                             <a href="./../../driving/index.html" class="c-card__tag">Driving</a>
                                     </footer>
                               </div>
                            </div>

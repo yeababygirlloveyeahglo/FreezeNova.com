@@ -103,7 +103,10 @@
                 canonicalLink.rel = 'canonical';
                 
                 if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-                    canonicalLink.href = 'https://unblocked-games.s3.amazonaws.com/index.html';
+    				if (window.location.hostname !== 'freezenova.github.io')
+    				{
+    					canonicalLink.href = 'https://unblocked-games.s3.amazonaws.com/index.html';
+    				}
                 } else {
                     canonicalLink.href = 'https://unblocked-games.s3.amazonaws.com' + window.location.pathname;
                 }
@@ -118,7 +121,8 @@
   // List of allowed domains
   var allowedDomains = [
     'unblocked-games.s3.amazonaws.com',
-    'unblocked-games.s3-accelerate.amazonaws.com'
+    'unblocked-games.s3-accelerate.amazonaws.com',
+    'freezenova.github.io'
   ];
 
   // Function to add meta tags for specific domains and paths
@@ -343,6 +347,90 @@
                <div class="section recently">
                   <div class="l-isotope js-infinitescroll">
                    <div class="grid-sizer"></div>
+                        <article
+                           class="c-card 
+                               2d  action  gun  mini  mobile  shooting 
+                           ">
+                           <div class="c-card__wrapper">
+                                       <figure class="c-card__image ">
+                                          <img
+                                             src="./../../media/posts/426/bullet-master.jpg"
+                                                srcset="./../../media/posts/426/responsive/bullet-master-xs.jpg 384w ,./../../media/posts/426/responsive/bullet-master-sm.jpg 600w" sizes="(min-width: 600px) 14.285vw, 100vw"
+                                              loading="lazy"
+                                             height="512"
+                                             width="512"
+                                             alt="Bullet Master Unblocked">
+                                       </figure>
+                              <div class="c-card__content">
+                                 <header>
+                                    <div class="c-card__title">
+                                       <a href="./../../bullet-master.html">
+                                          Bullet Master
+                                       </a>
+                                    </div>
+                                 </header>
+                                    <footer class="c-card__meta">
+                                             <a href="./../../gun/index.html" class="c-card__tag">Gun</a>
+                                    </footer>
+                              </div>
+                           </div>
+                        </article>
+                        <article
+                           class="c-card 
+                               3d  airplane  driving  simulator 
+                           ">
+                           <div class="c-card__wrapper">
+                                       <figure class="c-card__image ">
+                                          <img
+                                             src="./../../media/posts/226/512.jpg"
+                                                srcset="./../../media/posts/226/responsive/512-xs.jpg 384w ,./../../media/posts/226/responsive/512-sm.jpg 600w" sizes="(min-width: 600px) 14.285vw, 100vw"
+                                              loading="lazy"
+                                             height="512"
+                                             width="512"
+                                             alt="Alien Sky Invasion Unblocked">
+                                       </figure>
+                              <div class="c-card__content">
+                                 <header>
+                                    <div class="c-card__title">
+                                       <a href="./../../alien-sky-invasion.html">
+                                          Alien Sky Invasion
+                                       </a>
+                                    </div>
+                                 </header>
+                                    <footer class="c-card__meta">
+                                             <a href="./../../driving/index.html" class="c-card__tag">Driving</a>
+                                    </footer>
+                              </div>
+                           </div>
+                        </article>
+                        <article
+                           class="c-card 
+                               3d  clicker  idle  unity 
+                           ">
+                           <div class="c-card__wrapper">
+                                       <figure class="c-card__image ">
+                                          <img
+                                             src="./../../media/posts/427/idle-dev-startup.jpg"
+                                                srcset="./../../media/posts/427/responsive/idle-dev-startup-xs.jpg 384w ,./../../media/posts/427/responsive/idle-dev-startup-sm.jpg 600w" sizes="(min-width: 600px) 14.285vw, 100vw"
+                                              loading="lazy"
+                                             height="512"
+                                             width="512"
+                                             alt="Idle Dev Startup Unblocked">
+                                       </figure>
+                              <div class="c-card__content">
+                                 <header>
+                                    <div class="c-card__title">
+                                       <a href="./../../idle-dev-startup.html">
+                                          Idle Dev Startup
+                                       </a>
+                                    </div>
+                                 </header>
+                                    <footer class="c-card__meta">
+                                             <a href="./../../clicker/index.html" class="c-card__tag">Clicker</a>
+                                    </footer>
+                              </div>
+                           </div>
+                        </article>
                         <article
                            class="c-card 
                                3d  car  crazy  drift  driving  racing  simulator  unity 
@@ -2025,34 +2113,6 @@
                         </article>
                         <article
                            class="c-card 
-                               3d  car  crazy 
-                           ">
-                           <div class="c-card__wrapper">
-                                       <figure class="c-card__image ">
-                                          <img
-                                             src="./../../media/posts/462/survival-race-arena.webp"
-                                                srcset="./../../media/posts/462/responsive/survival-race-arena-xs.webp 384w ,./../../media/posts/462/responsive/survival-race-arena-sm.webp 600w" sizes="(min-width: 600px) 14.285vw, 100vw"
-                                              loading="lazy"
-                                             height="512"
-                                             width="512"
-                                             alt="Survival Race Unblocked">
-                                       </figure>
-                              <div class="c-card__content">
-                                 <header>
-                                    <div class="c-card__title">
-                                       <a href="./../../survival-race.html">
-                                          Survival Race
-                                       </a>
-                                    </div>
-                                 </header>
-                                    <footer class="c-card__meta">
-                                             <a href="./../../car/index.html" class="c-card__tag">Car</a>
-                                    </footer>
-                              </div>
-                           </div>
-                        </article>
-                        <article
-                           class="c-card 
                                2d  arcade  kids  puzzle  unity 
                            ">
                            <div class="c-card__wrapper">
@@ -2803,62 +2863,6 @@
                                  </header>
                                     <footer class="c-card__meta">
                                              <a href="./../../drift/index.html" class="c-card__tag">Drift</a>
-                                    </footer>
-                              </div>
-                           </div>
-                        </article>
-                        <article
-                           class="c-card 
-                               3d  airplane  mobile 
-                           ">
-                           <div class="c-card__wrapper">
-                                       <figure class="c-card__image ">
-                                          <img
-                                             src="./../../media/posts/379/x-trench-run512.jpg"
-                                                srcset="./../../media/posts/379/responsive/x-trench-run512-xs.jpg 384w ,./../../media/posts/379/responsive/x-trench-run512-sm.jpg 600w" sizes="(min-width: 600px) 14.285vw, 100vw"
-                                              loading="lazy"
-                                             height="512"
-                                             width="512"
-                                             alt="X Trench Run Unblocked">
-                                       </figure>
-                              <div class="c-card__content">
-                                 <header>
-                                    <div class="c-card__title">
-                                       <a href="./../../x-trench-run.html">
-                                          X Trench Run
-                                       </a>
-                                    </div>
-                                 </header>
-                                    <footer class="c-card__meta">
-                                             <a href="./../../airplane/index.html" class="c-card__tag">Airplane</a>
-                                    </footer>
-                              </div>
-                           </div>
-                        </article>
-                        <article
-                           class="c-card 
-                               3d  action  adventure  crazy  driving  simulator  tank  unity 
-                           ">
-                           <div class="c-card__wrapper">
-                                       <figure class="c-card__image ">
-                                          <img
-                                             src="./../../media/posts/54/tank-2.jpg"
-                                                srcset="./../../media/posts/54/responsive/tank-2-xs.jpg 384w ,./../../media/posts/54/responsive/tank-2-sm.jpg 600w" sizes="(min-width: 600px) 14.285vw, 100vw"
-                                              loading="lazy"
-                                             height="512"
-                                             width="512"
-                                             alt="Tank Driver Simulator Unblocked">
-                                       </figure>
-                              <div class="c-card__content">
-                                 <header>
-                                    <div class="c-card__title">
-                                       <a href="./../../tank-driver-simulator.html">
-                                          Tank Driver Simulator
-                                       </a>
-                                    </div>
-                                 </header>
-                                    <footer class="c-card__meta">
-                                             <a href="./../../driving/index.html" class="c-card__tag">Driving</a>
                                     </footer>
                               </div>
                            </div>
