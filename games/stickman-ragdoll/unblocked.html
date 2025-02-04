@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unblocked S3</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>  
+    <script src="Build/UnityLoader.js"></script>
+	<script src="https://unblocked-games.s3.amazonaws.com/games/unblocked.js"></script>
+	
+	<style>
+	 #links2{position:absolute;right:0;bottom:0;padding:8px;list-style:none;background-color:#fff;border-top-left-radius:5px}#links2 ul{list-style-type:none;margin:0;padding:0}#links2 ul li{display:inline}#links2 ul li a{color:#000;display:inline-block;margin-right:10px;text-decoration:none}#links2 ul li a.visited{color:#000}#links2 ul li a:hover{opacity:.85}
+      </style>
+	  
+	 <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111584806-40"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-111584806-40');
+</script>
+
+	
+    <script>
+	
+	function capitalize_Words(strtmp)
+    {
+        return strtmp.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+    }
+	
+	var str = window.location.pathname;
+	str = str.slice(7, str.length);
+	str = str.substring(0, str.lastIndexOf("/"));
+	str = str.replace(/-/g, ' ');
+	str = capitalize_Words(str);
+	
+	document.title = "" + str + " Unblocked S3";
+	
+	function InitApi(_appId) 
+    {
+		
+    }
+    
+    function ExternEval() 
+    {
+        
+    }
+	
+	function PreloadRewarded() 
+    {
+       
+    }
+	
+	function ShowRewarded() 
+    {
+      
+    }
+	
+	if (!unblockedRedirect())
+	{
+		var gameInstance = UnityLoader.instantiate("gameContainer", "Build/game.json", {onProgress: UnityProgress});
+	}
+	  
+	function FitScreen(){
+       var w=960;
+       var h=600;
+       var availWidth = window.innerWidth;
+       var availHeight = window.innerHeight;
+	   
+       var canvas = document.getElementById("#canvas");
+       if(availWidth/availHeight>w/h){
+         height = availHeight;
+         width = (height*w/h);
+      }else{
+         width = availWidth;
+         height = width*h/w;
+      }
+	  
+      canvas.width = width;
+      canvas.height = height;
+	  
+       document.getElementById("gameContainer").style.width=width + "px";
+       document.getElementById("gameContainer").style.height=height + "px";
+	   
+    }
+	
+	function OnLoadX()
+    {
+        unblockedOnLoadX(document);
+        
+        FitScreen();
+    }
+
+    </script>
+  </head>
+  <body onfocus="FitScreen();" onload="OnLoadX();" onresize="FitScreen();">
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: auto; height: auto"></div>
+    </div>
+	
+	<div id="links2" hidden="true">
+      
+    </div>
+	
+  </body>
+</html>
