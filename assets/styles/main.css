@@ -1,0 +1,247 @@
+
+:root {
+  --light-color: #ffffff;
+}
+
+#gameDiv {
+    width: 180px;
+	min-width:180px;
+    height: 180px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#gameDiv:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    outline: 3px solid var(--accent-color);
+    z-index: 1;
+}
+#gameDiv:after {
+    content: '';
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 180px;
+    width: 180px;
+    border-radius: 20px;
+    background: linear-gradient(transparent 25%, rgba(0, 0, 0, 0.3) 100%);
+    transition: box-shadow 0.6s var(--bezier), opacity 0.2s var(--bezier);
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.24);
+}
+#gameDiv:hover:after {
+    opacity: 1;
+}
+
+#gameDiv .imageCon {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    pointer-events: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#gameDiv .imageCon.partner {
+    background-color: var(--dark-accent);
+}
+#gameDiv .imageCon img {
+    object-fit: cover;
+    border-radius: 20px;
+    width: 180px;
+    height: 180px;
+}
+#gameDiv .imageCon img.partner {
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+#gameDiv input {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+#gameDiv .innerGameDiv {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--body-font)!important;
+	line-height: var(--line-height);
+	font-weight: 700;
+	font-size: 16px;
+	margin: 0;
+    white-space: normal;
+	overflow: hidden;
+    color: var(--light-color) !important;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.2s linear;
+    transition: visibility 0s, opacity 0.2s linear;
+    margin: 0%;
+    z-index: 4;
+}
+#gameDiv:hover .innerGameDiv {
+    visibility: visible;
+    opacity: 1;
+}
+#gameDiv #pin {
+    position: absolute;
+    top: -10%;
+    left: 85%;
+    border: none;
+    background-color: transparent;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+
+#gameDiv #pin:hover {
+    transform: scale(1.1);
+}
+
+#gameDiv #pin img {
+    width: 40px;
+    height: 40px;
+}
+
+#newbanner {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+#newbanner img {
+    width: 80px;
+    height: 80px;
+}
+
+.horizontalCon {
+    text-align: center;
+    width: 90vw;
+    position: relative;
+	padding-left: 4vw;
+}
+
+.horizontalCon .gamesCon {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    overflow-x: scroll;
+    white-space: nowrap;
+    width: 90vw;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    gap: 10px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.horizontalCon .gamesCon #gameDiv:nth-child(1) {
+    margin-left: 0%;
+}
+.horizontalCon .gamesCon::-webkit-scrollbar {
+    display: none;
+}
+
+.horizontalCon .arrowsCon {
+    z-index: 5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.horizontalCon .arrowsCon > * {
+    pointer-events: auto;
+}
+
+.arrowsCon .arrowCon {
+    cursor: pointer;
+    height: 180px;
+    width: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.arrowsCon .arrowCon .arrow {
+    width: 25px;
+    transition: transform 0.1s;
+    opacity: 0;
+    transition: all 0.2s;
+    pointer-events: none;
+}
+
+.arrowsCon .arrowCon:hover > .arrow,
+.arrowCon {
+    transform: scale(1.08);
+}
+
+.horizontalCon:hover > .arrowsCon .arrowCon {
+    background-color: #00000067;
+}
+
+.horizontalCon:hover > .arrowsCon .arrowCon .arrow {
+    opacity: 1 !important;
+}
+
+.arrowsCon > .arrowCon:hover {
+    background-color: #000000b9 !important;
+}
+
+#games {
+    padding: 0 2% 2% 2%;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    gap: 2vw;
+    flex-wrap: wrap;
+    gap: 7.5px;
+}
+
+#games h1 {
+    margin-right: auto;
+    color: var(--light-color);
+    font-size: 1.3rem;
+    margin-bottom: 0%;
+    margin-top: 15px;
+}
+
+#games h1 a {
+    font-size: 1.1rem;
+    margin-left: 10px;
+}
+
+#games h2 {
+    margin-right: auto;
+    color: var(--light-color);
+    font-size: 1.3rem;
+    margin-bottom: 0%;
+    margin-top: 15px;
+}
+
+#games h2 a {
+    font-size: 1.1rem;
+    margin-left: 10px;
+}
