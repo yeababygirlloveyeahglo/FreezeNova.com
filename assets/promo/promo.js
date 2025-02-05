@@ -99,7 +99,7 @@ class AdManager {
 		transition: background-color 0.3s, color 0.3s;
 	}
 
-      .hidden {
+      .adhidden {
         display: none;
       }
     `;
@@ -129,7 +129,7 @@ class AdManager {
   createAdContainer() {
     this.adContainer = document.createElement('div');
     this.adContainer.id = 'ad-container';
-    this.adContainer.classList.add('hidden');
+    this.adContainer.classList.add('adhidden');
     document.body.appendChild(this.adContainer);
 
     this.overlay = document.createElement('div');
@@ -180,7 +180,7 @@ class AdManager {
 		const iframeSrc = this.promoLocation + `promo.html?name=${encodeURIComponent(this.currentAd.name)}&img=${encodeURIComponent(this.currentAd.image)}&url=${encodeURIComponent(this.currentAd.url)}`;
 		this.adIframe.src = iframeSrc;
 
-		this.adContainer.classList.remove('hidden');
+		this.adContainer.classList.remove('adhidden');
 
 		const skipTime = 3; //ad.type === "0" ? 5 : 10; // Skip button appears after this time
 		const autoCloseTime = 30; // Auto-close time based on type
@@ -298,7 +298,7 @@ class AdManager {
 			const iframeSrc = this.promoLocation + `promo.html?name=${encodeURIComponent(this.currentAd.name)}&img=${encodeURIComponent(this.currentAd.image)}&url=${encodeURIComponent(this.currentAd.url)}`;
 			this.adIframe.src = iframeSrc;
 
-			this.adContainer.classList.remove('hidden');
+			this.adContainer.classList.remove('adhidden');
 
 			const skipTime = 5; //ad.type === "0" ? 5 : 10; // Skip button appears after this time
 			const autoCloseTime = 40; // Auto-close time based on type
