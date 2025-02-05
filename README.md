@@ -25,10 +25,10 @@ This project is deployed on several platforms for demonstration:
 # Getting Started
 
 1. **Clone or Fork the Repository**  
-   - **Fork** from [freezenova/freezenova.github.io](https://github.com/freezenova/freezenova.github.io) if you intend to make changes.  
+   - **Fork** from [lich2king/freezenova.github.io](https://github.com/lich2king/freezenova.github.io) if you intend to make changes.  
    - **Clone** locally if you just want to deploy:
      ```bash
-     git clone https://github.com/freezenova/freezenova.github.io
+     git clone https://github.com/lich2king/freezenova.github.io
      ```
    - The main branch has all the files you need to launch your unblocked games site.
 
